@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/gretchendeutsch/.dotnet/store/|arch|/|tfm|",
+      "/Users/gretchendeutsch/.nuget/packages"
+    ]
+  }
+}

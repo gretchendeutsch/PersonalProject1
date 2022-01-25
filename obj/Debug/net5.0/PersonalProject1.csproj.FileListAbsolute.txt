@@ -1,0 +1,15 @@
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/PersonalProject1.deps.json
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/PersonalProject1.runtimeconfig.json
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/PersonalProject1.runtimeconfig.dev.json
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/PersonalProject1.dll
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/ref/PersonalProject1.dll
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/bin/Debug/net5.0/PersonalProject1.pdb
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.csproj.AssemblyReference.cache
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.AssemblyInfoInputs.cache
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.AssemblyInfo.cs
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.csproj.CoreCompileInputs.cache
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.dll
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/ref/PersonalProject1.dll
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.pdb
+/Users/gretchendeutsch/Documents/GitHub/PersonalProject1/obj/Debug/net5.0/PersonalProject1.genruntimeconfig.cache

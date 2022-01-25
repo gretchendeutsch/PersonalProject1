@@ -12,7 +12,7 @@ secretly a Guy Phillips? Take this quiz to find out today!
 
 The purpose of the Personality Quiz is to provide entertainment to the user. The
 program outputs questions to the user and accepts their answer as input via the
-keyboard. Finally, at the end of the quiz, the program displays which Chadwickian the player is. The player gets insight about a different friend, which can allow them to know more about the student body.
+keyboard. The program stores the players answers to come up with the final result. Finally, at the end of the quiz, the program displays which Chadwickian the player is. The player gets insight about a different friend, which can allow them to know more about the student body.
 
 
 ## High Level Design
@@ -24,19 +24,14 @@ At a high level, the 'Which Chadwickian Are You Quiz' works in the following way
    one of the scores by 1)
 3. Loops through each question and
    * Prompts the user to answer the question
-   * Increases the appropriate score by 1
+   * Increases the appropriate/correlated score by 1
 4. When all of the questions have been answered, use the highest score to
    display the result of the quiz.
 
 ### Flowchart
 
-![Connector Image](../images/question1.png)
-![Connector Image](../images/question2.png)
-![Connector Image](../images/question3.png)
-![Connector Image](../images/question4.png)
-![Connector Image](../images/question5.png)
-![Connector Image](../images/question6.png)
-![Connector Image](../images/displayresults.png)
+![Connector Image](/images/flowchart.png)
+
 
 ## Methods and Classes
 
@@ -55,7 +50,7 @@ manage this, I've created a class which has two properties: a `string Question`
 which will be the question being asked and a `List<string> Answers` which will
 be a list of the possible answers to that questions.
 
-![Question Class](../images/PersonalityQuizQuestionClass.png)
+![Connector Image](/images/PersonalityQuizQuestionClass.png)
 
 ### static int AskQuestion(Question q)
 
@@ -63,7 +58,7 @@ Displays the specified question along with each of its answers. Then, prompts
 the user to select one of the answers. Finally, returns the index of the answer
 the player selected.
 
-![Ask Question](../images/PersonalityQuizAskQuestion.png)
+![Connector Image](/images/askquestion.png)
 
 1. Display the question
 2. Loop through each answer and display it
@@ -77,7 +72,7 @@ Given a list of answers, prompts the user to enter a number corresponding to one
 of the answers. If the user enters a number that is not within the specified
 range, the user is asked to enter another value.
 
-![Get Valid Answer](../images/PersonalityQuizGetValidAnswer.png)
+![Connector Image](/images/getvalidanswer.png)
 
 1. Validate that there is at least 1 possible answer.
 2. If the list of answers is empty, throw an exception
@@ -95,7 +90,7 @@ Given two lists, one representing the scores for each possible result and one
 representing each possible result, determines which score is the highest and
 returns the corresponding string from the results list.
 
-![Get Result](../images/PersonalityQuizGetResult.png)
+![Connector Image](/images/getresult.png)
 
 1. Initialize highest to 0. This variable represents the highest score we have
    seen so far.
