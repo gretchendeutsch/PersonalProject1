@@ -7,6 +7,9 @@ namespace PersonalProject1
     {
         static void Main(string[] args)
         {
+           
+         
+
             // Feedback(jcollard 2022-01-27): 
             // Here is an example of how you would create a question:
 
@@ -28,7 +31,28 @@ namespace PersonalProject1
             Console.WriteLine($"1. {simpleQuestion.answers[0]}");
             Console.WriteLine($"2. {simpleQuestion.answers[1]}");
             Console.WriteLine($"3. {simpleQuestion.answers[2]}");
+
+            Question food = new Question();
+            food.question = "What is your favorite food?";
+            food.answers.Add("I don't eat.");
+            food.answers.Add("Water");
+
+            Question color = new Question();
+
+            AskQuestion(food);
+
+
         }
+
+        public static void TestAll()
+        {
+            bool testLoadFile = TestLoadFile.RunTest();
+            Console.WriteLine($"Test LoadFile(filename): {testLoadFile}");
+
+            bool testGetUserSelection = TestGetUserSelection.RunTest();
+            Console.WriteLine($"Test GetUserSelection(options): {testLoadFile}");
+        }
+
 
         /// <summary>
         /// The GetValidAnswer method validates that there is at least one possible answer. If the list of answers is empty the method throws an exception.
@@ -91,11 +115,9 @@ namespace PersonalProject1
 
             return -1;
         }
-
-        // TODO(jcollard 2022-01-27): 
-        // Add method stubs for remaining methods
-
     }
+
+
 
     // Feedback(jcollard 2022-01-27): I've added in the Question class for you.
     // This class stores both a question string and a list of answers together!
