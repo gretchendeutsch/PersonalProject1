@@ -7,9 +7,26 @@ namespace PersonalProject1
     {
         static void Main(string[] args)
         {
-           
-         
 
+            public static void TestAll()
+            {
+                bool testAskQuestion = TestAskQuestion.RunTest();
+                Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
+
+                bool testGetResult = TestGetResult.RunTest();
+                Console.WriteLine($"Test GetResult(scores): {testGetResult}");
+
+                bool testGetValidAnswer = TestGetValidAnswer.RunTest();
+                Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
+
+            }
+            // Checks if the user added a command line argument 
+            // Also checks if the first argument is "test"
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return; // Exits the program 
+            }
             // Feedback(jcollard 2022-01-27): 
             // Here is an example of how you would create a question:
 
