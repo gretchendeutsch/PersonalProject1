@@ -1,6 +1,6 @@
 namespace PersonalProject1
 {
-    class TestLoadFile 
+    class TestGetValidAnswer
     {
         public static bool RunTest()
         {
