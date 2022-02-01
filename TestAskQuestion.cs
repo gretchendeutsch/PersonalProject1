@@ -7,6 +7,41 @@ namespace PersonalProject1
     {
         public static bool RunTest()
         {
+
+
+            Question testQuestion = new Question();
+            testQuestion.question = "Who let the dogs out?";
+            testQuestion.answers.Add("Zoe.");
+            testQuestion.answers.Add("You did!");
+            testQuestion.answers.Add("He let himself out.");
+
+            Console.WriteLine("Expected: the output to contain 3 options");
+            Console.WriteLine("First type 4. This should be an invalid option. It will ask again");
+            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
+
+
+          
+            testQuestion.question = "What is the weather outside?";
+            testQuestion.answers.Add("Sunny.");
+            testQuestion.answers.Add("Rainy.");
+            testQuestion.answers.Add("snowing.");
+
+            Console.WriteLine("Expected: the output to contain 3 options");
+            Console.WriteLine("First type 4. This should be an invalid option. It will ask again");
+            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
+
+           
+    
+             int result = Program.AskQuestion(testQuestion);
+
+            
+      
+
+
+
+
+
+
             // TODO(jcollard 2022-02-01): These look great.
             // Now, figure out how to call your methods. In this case you would do the following:
             //
