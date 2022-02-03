@@ -30,6 +30,15 @@ namespace PersonalProject1
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
 
+            testQuestion.question = "What flavor candy?";
+            testQuestion.answers.Add("vanilla");
+            testQuestion.answers.Add("grape");
+            testQuestion.answers.Add("poop");
+
+            Console.WriteLine("Expected: the output to contain three options");
+            Console.WriteLine("First type 5. This should be an invalid option. It will ask again");
+            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
+
            
     
              int result = Program.AskQuestion(testQuestion);

@@ -28,7 +28,7 @@ namespace PersonalProject1
 
             answers.Add("strawberry");
 
-            Console.WriteLine("You should expect to see 4 options: ???. Enter 6. This should produce an invalid response. Then enter 3.");
+            Console.WriteLine("You should expect to see 4 options: phone, laptop, grape, and strawberry. Enter 6. This should produce an invalid response. Then enter 3.");
 
             int result2 = Program.GetValidAnswer(answers);
 
@@ -38,23 +38,25 @@ namespace PersonalProject1
                 return false;
             }
 
+            List<string> answers3 = new List<string>();
+            answers.Add("laugh");
+            answers.Add("cry");
+            answers.Add("burp");
+            answers.Add("die");
 
-            // if answer = none
-            // {
-            //     catch(Exception e)
-            // {
-            //     //ignore the error
-            // }
+            Console.WriteLine("You should expect to see 4 options: laugh, cry, burp, and die. Enter 6. This should produce an invalid response. Then enter 3.");
 
-            // Console.WriteLine("Chose an answer");
+            int result3 = Program.GetValidAnswer(answers);
 
-            // if answer = 1
-            // {
-            //     store.
-            // }
+            if (result3 != 3)
+            {
+                Console.Error.WriteLine($"Expected result to be 2 but was {result3}");
+                return false;
+            }
 
-            // }
 
+           
+           
 
 
 

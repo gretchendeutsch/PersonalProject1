@@ -16,39 +16,43 @@ namespace PersonalProject1
             results.Add("Kanye");
             results.Add("Bob the Builder");
             string result = Program.GetResult(scores, results);
-            if( result != "Bob the Builder")
+            if (result != "Bob the Builder")
             {
                 Console.Error.WriteLine($"Expected result to be 'Bob the Builder' but was {0}");
-                return false; 
+                return false;
             }
 
-            List<int> scores = new List<int>();
-            scores.Add(1);
-            scores.Add(3);
+            List<int> scores2 = new List<int>();
+            scores.Add(0);
+            scores.Add(4);
 
-            List<string> results = new List<string>();
-            results.Add("Fruit");
-            results.Add("Chocolate");
-            string result = Program.GetResult(scores, results);
-            if( result != "Bob the Builder")
+            List<string> results2 = new List<string>();
+            results.Add("grape");
+            results.Add("strawberry");
+            string result2 = Program.GetResult(scores, results);
+            if (result != "strawberry")
             {
-                Console.Error.WriteLine($"Expected result to be 'Chocolate' but was {1}");
-                return false; 
+                Console.Error.WriteLine($"Expected result to be 'strawberry' but was {0}");
+                return false;
             }
+
+            List<int> scores3 = new List<int>();
+            scores.Add(0);
+            scores.Add(4);
+
+            List<string> results3 = new List<string>();
+            results.Add("soccer");
+            results.Add("football");
+            string result3 = Program.GetResult(scores, results);
+            if (result != "strawberry")
+            {
+                Console.Error.WriteLine($"Expected result to be 'football' but was {0}");
+                return false;
+            }
+
+            
             
 
-            // List<string> score = Program.GetResult("text_scores.txt").ToList();
-
-            // Score testscore = new Score();
-
-            // score[highestIx] = 0;
-            // score.initial = new score.highest; 
-
-            // Result score.highest = new Result();
-            // // initialize highest score to be 0
-
-
-            // return results[highestIx];
             return false;
         }
     }
