@@ -18,10 +18,7 @@ namespace PersonalProject1
             
             
             
-            // Feedback(jcollard 2022-01-27): 
-            // Here is an example of how you would create a question:
-
-            // First create a new Question()
+            
             Question simpleQuestion = new Question();
 
             // Next, set the question to be an actual question.
@@ -81,7 +78,7 @@ namespace PersonalProject1
             // 1. ensure that there is one possible answer[answer.Length<1]
             // <summary>
             // 2. throw new exception("Must have at least one answer.")
-            // 3. Display $"Select an option 1 to {answer.Lenght}"
+            // 3. Display $"Select an option 1 to {answer.Length}"
             // 4. store the response [int choice = int.Parse(ReadLine())]
             // 5. validate the choice is one of possible answers given[choice > 0 AND choice <= answers.Length]
             // 6. return choice if yes
@@ -92,7 +89,7 @@ namespace PersonalProject1
         /// <summary>
         /// The GetResult method initializes the start score of to be 0. It then loops through the each score in 
         /// scores that were determined by the users answers. It tracks which score is the highest, and each time a 
-        /// user answers a question the score updates appropriatley. At the end of the game the highest score is checked 
+        /// user answers a question the score updates appropriately. At the end of the game the highest score is checked 
         /// and the results are shown. 
         /// </summary>
         /// <param name="scores"></param>
@@ -101,19 +98,19 @@ namespace PersonalProject1
         public static string GetResult(List<int> scores, List<string> results)
         {
             //1. initialize highest score to 0 [int highest = 0]
-            //2. initialize highest score to 0: int highets Ix = 0
+            //2. initialize highest score to 0: int highest Ix = 0
             //3.Loop through each score in scores, tracking the index in variable currentIx
             //    * If score>highest score
             //          * update highest to store the score from answer[score=highest]
-            //          * update highestix to store the current ix[highestix=currentix]
-            //4. After each score is checked highestix should be the highest score[currIx=currIx+1]
+            //          * update highestIx to store the current ix[highestIx=currentIx]
+            //4. After each score is checked highestIx should be the highest score[currIx=currIx+1]
             //5.return results[highestIx]
             return null;
         }
 
         /// <summary>
         /// the question is displayed and then the answers are displayed.The user puts in their answer choice,
-        /// but if the user does not enter a positive answer choice then an error message is displayed and the player 
+        /// but if the user does not enter a positive integer/answer choice then an error message is displayed and the player 
         /// is prompted to put in an actual answer. Otherwise, the user's input is returned.
         /// </summary>
         /// <param name="q"> The message to potray an invalid answer</param>
@@ -133,8 +130,7 @@ namespace PersonalProject1
 
 
 
-    // Feedback(jcollard 2022-01-27): I've added in the Question class for you.
-    // This class stores both a question string and a list of answers together!
+    
     class Question
     {
         public string question;

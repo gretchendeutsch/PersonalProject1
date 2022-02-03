@@ -22,15 +22,15 @@ namespace PersonalProject1
             }
 
             List<string> answers2 = new List<string>();
-            answers.Add("phone");// TODO: user answers2
-            answers.Add("laptop");// TODO: user answers2
-            answers.Add("grape");// TODO: user answers2
+            answers2.Add("phone");
+            answers2.Add("laptop");
+            answers2.Add("grape");
 
             answers.Add("strawberry");
 
             Console.WriteLine("You should expect to see 4 options: phone, laptop, grape, and strawberry. Enter 6. This should produce an invalid response. Then enter 3.");
 
-            int result2 = Program.GetValidAnswer(answers); // TODO: user answers2
+            int result2 = Program.GetValidAnswer(answers2); 
 
             if (result2 != 2)
             {
@@ -39,16 +39,16 @@ namespace PersonalProject1
             }
 
             List<string> answers3 = new List<string>();
-            answers.Add("laugh");// TODO: user answers3
-            answers.Add("cry");// TODO: user answers3
-            answers.Add("burp");// TODO: user answers3
-            answers.Add("die");// TODO: user answers3
+            answers3.Add("laugh");
+            answers3.Add("cry");
+            answers3.Add("burp");
+            answers3.Add("die");
 
             Console.WriteLine("You should expect to see 4 options: laugh, cry, burp, and die. Enter 6. This should produce an invalid response. Then enter 3.");
 
-            int result3 = Program.GetValidAnswer(answers); // TODO: user answers3
+            int result3 = Program.GetValidAnswer(answers3); 
 
-            if (result3 != 3) // This should be 2 (e.g. 3 - 1) OR you need to ask the user to enter 4.
+            if (result3 != 2) 
             {
                 Console.Error.WriteLine($"Expected result to be 2 but was {result3}");
                 return false;
@@ -60,7 +60,7 @@ namespace PersonalProject1
 
 
 
-            return false; // TODO(jcollard 2022-02-03): Return true
+            return true; 
         }
     }
 

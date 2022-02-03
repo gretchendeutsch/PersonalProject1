@@ -1,10 +1,10 @@
 # PersonalProject1
 
-# Which Chadwickian Are You Quiz
+# Which Chadwick Student Are You Quiz
 
 ## Description
 
-This Personality Quiz will help you determine which Chadwickian
+This Personality Quiz will help you determine which Chadwick student
 you are! Are you more of a Gretchen or are you
 secretly a Guy Phillips? Take this quiz to find out today!
 
@@ -12,12 +12,12 @@ secretly a Guy Phillips? Take this quiz to find out today!
 
 The purpose of the Personality Quiz is to provide entertainment to the user. The
 program outputs questions to the user and accepts their answer as input via the
-keyboard. The program stores the players answers to come up with the final result. Finally, at the end of the quiz, the program displays which Chadwickian the player is. The player gets insight about a different friend, which can allow them to know more about the student body.
+keyboard. The program stores the players answers to come up with the final result. Finally, at the end of the quiz, the program displays which Chadwick Student the player is. The player gets insight about a different friend, which can allow them to know more about the student body.
 
 
 ## High Level Design
 
-At a high level, the 'Which Chadwickian Are You Quiz' works in the following way:
+At a high level, the 'Which Chadwick Student Are You Quiz' works in the following way:
 
 1. Initializes a list of scores to 0 (each score represents one of the possible outcomes)
 2. Creates a list of questions and answers (each possible answer will increase

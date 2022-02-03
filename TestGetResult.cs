@@ -23,41 +23,56 @@ namespace PersonalProject1
             }
 
             List<int> scores2 = new List<int>();
-            scores.Add(0);
-            scores.Add(4);
+            scores2.Add(0);
+            scores2.Add(4);
 
             List<string> results2 = new List<string>();
-            results.Add("grape"); // TODO: Change to results2
-            results.Add("strawberry"); // TODO: Change to results2
-            string result2 = Program.GetResult(scores, results); // TODO: Change to results2
-            if (result != "strawberry")
+            results2.Add("grape");
+            results2.Add("strawberry");
+            string result2 = Program.GetResult(scores, results);
             {
                 Console.Error.WriteLine($"Expected result to be 'strawberry' but was {0}");
                 return false;
             }
 
             List<int> scores3 = new List<int>();
-            scores.Add(0);
-            scores.Add(4);
+            scores3.Add(0);
+            scores3.Add(4);
 
             List<string> results3 = new List<string>();
-            results.Add("soccer");
+            results3.Add("soccer");
             results.Add("football");
             string result3 = Program.GetResult(scores, results);
-            if (result != "strawberry") // TODO: Change to football
+            if (result3 != "football")
             {
                 Console.Error.WriteLine($"Expected result to be 'football' but was {0}");
                 return false;
             }
 
+
+            List<int> scores4 = new List<int>();
+            scores4.Add(0);
+            scores4.Add(4);
+
+            List<string> results4 = new List<string>();
+            results4.Add("face");
+            results4.Add("hands");
+            results4.Add("butt");
+            results4.Add("toe");
+            string result4 = Program.GetResult(scores, results);
+            if (result4 != "toe")
+            {
+                Console.Error.WriteLine($"Expected result to be 'toe' but was {0}");
+                return false;
+            }
+
+
+
             
-            // TODO(jcollard 2022-02-03): These look good. But, you want to test a different
-            // situation with the scores. What should happen if you have a list of scores
-            // with 4 different elements? Then you need a list with 4 different results.
             // You should write another test case with situations that test the nuances of
             // the method.
 
-            return false;
+            return true;
         }
     }
 
