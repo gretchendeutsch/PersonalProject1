@@ -22,15 +22,15 @@ namespace PersonalProject1
             }
 
             List<string> answers2 = new List<string>();
-            answers.Add("phone");
-            answers.Add("laptop");
-            answers.Add("grape");
+            answers.Add("phone");// TODO: user answers2
+            answers.Add("laptop");// TODO: user answers2
+            answers.Add("grape");// TODO: user answers2
 
             answers.Add("strawberry");
 
             Console.WriteLine("You should expect to see 4 options: phone, laptop, grape, and strawberry. Enter 6. This should produce an invalid response. Then enter 3.");
 
-            int result2 = Program.GetValidAnswer(answers);
+            int result2 = Program.GetValidAnswer(answers); // TODO: user answers2
 
             if (result2 != 2)
             {
@@ -39,14 +39,14 @@ namespace PersonalProject1
             }
 
             List<string> answers3 = new List<string>();
-            answers.Add("laugh");
-            answers.Add("cry");
-            answers.Add("burp");
-            answers.Add("die");
+            answers.Add("laugh");// TODO: user answers3
+            answers.Add("cry");// TODO: user answers3
+            answers.Add("burp");// TODO: user answers3
+            answers.Add("die");// TODO: user answers3
 
             Console.WriteLine("You should expect to see 4 options: laugh, cry, burp, and die. Enter 6. This should produce an invalid response. Then enter 3.");
 
-            int result3 = Program.GetValidAnswer(answers);
+            int result3 = Program.GetValidAnswer(answers); // TODO: user answers3
 
             if (result3 != 3) // This should be 2 (e.g. 3 - 1) OR you need to ask the user to enter 4.
             {
