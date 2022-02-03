@@ -20,8 +20,27 @@ namespace PersonalProject1
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
 
 
+            // TODO(jcollard 2022-02-03): Your setup looks great! Now, you need to call the method here:
+
+            // int result = Program.AskQuestion(testQuestion);
+
+            // Then, you should write an if statement to check the result. When the user types 1, what should the variable
+            // result store? I believe the variable should be storing the number 0 (e.g. Zoe). This is because in C#, the
+            // index starts at 0. But, you are displaying 1. Zoe to the user. Does this make sense?
+
+            // if (result != 0) // We check if it is **NOT** equal to 0 because we are checking if the test should fail
+            // {
+            //     Console.Error.WriteLine($"Failure: Expected result to be 0 but it was {result}.");
+            //     return false;
+            // }  
           
-            testQuestion.question = "What is the weather outside?";
+            // Next, create a new question. You're actually just updating the previous question here. 
+            // If you use `testQuestion` again, you will keep all of the answers and you're just adding 
+            // to the end of the list
+
+            // Question testQuestion2 = new Question();
+
+            testQuestion.question = "What is the weather outside?"; // TODO: Change these to `testQuestion2`
             testQuestion.answers.Add("Sunny.");
             testQuestion.answers.Add("Rainy.");
             testQuestion.answers.Add("snowing.");
@@ -30,16 +49,22 @@ namespace PersonalProject1
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
 
-            testQuestion.question = "What flavor candy?";
+            // Next, call Program.AskQuestion(testQuestion2). Save the result (you will need a new variable). Finally, test if the result is correct.
+
+            // Create Another Question object:
+            // Question testQuestion3 = new Question();
+
+            testQuestion.question = "What flavor candy?"; // TODO: Change these to `testQuestion3`
             testQuestion.answers.Add("vanilla");
             testQuestion.answers.Add("grape");
-            testQuestion.answers.Add("poop");
+            testQuestion.answers.Add("poop"); // Mmmm! Yummy!
 
             Console.WriteLine("Expected: the output to contain three options");
             Console.WriteLine("First type 5. This should be an invalid option. It will ask again");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
 
-           
+            // Next, call Program.AskQuestion(testQuestion2). Save the result (you will need a new variable). Finally, test if the result is correct.
+
     
              int result = Program.AskQuestion(testQuestion);
 
