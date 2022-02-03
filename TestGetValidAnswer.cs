@@ -48,7 +48,7 @@ namespace PersonalProject1
 
             int result3 = Program.GetValidAnswer(answers);
 
-            if (result3 != 3)
+            if (result3 != 3) // This should be 2 (e.g. 3 - 1) OR you need to ask the user to enter 4.
             {
                 Console.Error.WriteLine($"Expected result to be 2 but was {result3}");
                 return false;
@@ -60,7 +60,7 @@ namespace PersonalProject1
 
 
 
-            return false;
+            return false; // TODO(jcollard 2022-02-03): Return true
         }
     }
 
