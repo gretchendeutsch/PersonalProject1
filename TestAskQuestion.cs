@@ -57,7 +57,7 @@ namespace PersonalProject1
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again");
             Console.WriteLine("Next type 2. This should be a valid option. By selecting 2, the method should return 2.");
             int expected2 = 1;
-            if (testResult != expected2)
+            if (testResult != expected2) // TODO(jcollard 2022-02-05): typo on this line
             {
                 Console.Error.WriteLine($"Failure: Expected result to be 2 but it was {testResult} ");
                 return false;
@@ -77,11 +77,13 @@ namespace PersonalProject1
             Console.WriteLine("First type 5. This should be an invalid option. It will ask again");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
             int expected3 = 1;
-            if (testResult != expected3)
+            if (testResult != expected3)// TODO(jcollard 2022-02-05): typo on this line
             {
                 Console.Error.WriteLine($"Failure: Expected result to be 1 but it was {testResult}");
                 return false;
             }
+
+            // Feedback(jcollard 2022-02-05): YES! This test is perfect! Great job!
             try
             {
                 testResult3 = Program.AskQuestion(null);
