@@ -44,6 +44,7 @@ namespace PersonalProject1
             answers3.Add("burp");
             answers3.Add("die");
 
+            // TODO(jcollard 2022-02-05): Try testing different inputs than your last test case. The idea is to test a variety of options.
             Console.WriteLine("You should expect to see 4 options: laugh, cry, burp, and die. Enter 6. This should produce an invalid response. Then enter 3.");
 
             int result3 = Program.GetValidAnswer(answers3); 
@@ -54,12 +55,7 @@ namespace PersonalProject1
                 return false;
             }
 
-
-           
-           
-
-
-
+            // TODO(jcollard 2022-02-05): What should happen if the list is empty or null?
             return true; 
         }
     }

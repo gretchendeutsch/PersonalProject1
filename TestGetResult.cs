@@ -23,6 +23,7 @@ namespace PersonalProject1
             }
 
             List<int> scores2 = new List<int>();
+            // TODO(jcollard 2022-02-05): Try a list with different values than your previous test
             scores2.Add(0);
             scores2.Add(4);
 
@@ -30,12 +31,15 @@ namespace PersonalProject1
             results2.Add("grape");
             results2.Add("strawberry");
             string result2 = Program.GetResult(scores, results);
+
+            //TODO(jcollard 2022-02-05): Missing if statement
             {
                 Console.Error.WriteLine($"Expected result to be 'strawberry' but was {0}");
                 return false;
             }
 
             List<int> scores3 = new List<int>();
+            // TODO(jcollard 2022-02-05): Try a list with different values than your previous test
             scores3.Add(0);
             scores3.Add(4);
 
@@ -51,6 +55,7 @@ namespace PersonalProject1
 
 
             List<int> scores4 = new List<int>();
+            // TODO(jcollard 2022-02-05): The length of this list should match the length of the results list.
             scores4.Add(0);
             scores4.Add(4);
 
@@ -65,8 +70,6 @@ namespace PersonalProject1
                 Console.Error.WriteLine($"Expected result to be 'toe' but was {0}");
                 return false;
             }
-
-
 
             
             // You should write another test case with situations that test the nuances of
