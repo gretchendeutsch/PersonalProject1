@@ -68,9 +68,17 @@ namespace PersonalProject1
 
 
 
-            
-            // You should write another test case with situations that test the nuances of
-            // the method.
+            List<string> results5 = new List<string>();
+            results5.Add("jacket");
+            results5.Add("shirt");
+            results5.Add("shoe");
+            results5.Add("sock");
+            string result5 = Program.GetResult(scores, results);
+            if (result5 != "jacket")
+            {
+                Console.Error.WriteLine($"Expected result to be 'jacket' but was {0}");
+                return false;
+            }
 
             return true;
         }
