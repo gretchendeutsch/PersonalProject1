@@ -74,6 +74,23 @@ namespace PersonalProject1
         /// <returns>The valid answer the player chose</returns>
         public static int GetValidAnswer(List<string> answers)
         {
+            int userChoice;
+
+            do
+            {
+                Console.WriteLine("Enter a number greater than 0:");
+                string input = Console.ReadLine();
+                bool isANumber = int.TryParse(input, out userChoice);
+                if (isANumber == false)
+                {
+                    Console.Error.WriteLine("You did not enter a number");
+                }
+                else if (userChoice <=0 || userChoice >= answers.Count)
+                {
+                    Console.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
+                }
+                while(userChoice <= 0 || userChoice >= answers.Count);
+            }
             return -1;
             // 1. ensure that there is one possible answer[answer.Length<1]
             // <summary>
