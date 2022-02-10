@@ -54,11 +54,11 @@ namespace PersonalProject1
             bool testAskQuestion = TestAskQuestion.RunTest();
             Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
 
-            // bool testGetResult = TestGetResult.RunTest();
-            // Console.WriteLine($"Test GetResult(scores): {testGetResult}");
+            bool testGetResult = TestGetResult.RunTest();
+            Console.WriteLine($"Test GetResult(scores): {testGetResult}");
 
-            // bool testGetValidAnswer = TestGetValidAnswer.RunTest();
-            // Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
+            bool testGetValidAnswer = TestGetValidAnswer.RunTest();
+            Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
 
         }
 
