@@ -53,8 +53,8 @@ namespace PersonalProject1
                 Console.Error.WriteLine($"Expected result to be 'baseball' but was {0}");
                 return false;
             }
-            
-            
+
+
 
             List<int> scores4 = new List<int>();
             // TODO(jcollard 2022-02-05): The length of this list should match the length of the results list.
@@ -75,11 +75,6 @@ namespace PersonalProject1
                 Console.Error.WriteLine($"Expected result to be 'toe' but was {0}");
                 return false;
             }
-
-
-
-
-
 
             return true;
         }

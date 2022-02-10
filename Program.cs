@@ -128,6 +128,13 @@ namespace PersonalProject1
             //          * update highestIx to store the current ix[highestIx=currentIx]
             //4. After each score is checked highestIx should be the highest score[currIx=currIx+1]
             //5.return results[highestIx]
+
+            // TODO(jcollard 2022-02-10): This is a tricky method to write. Each
+            // of the lists is associated with the other. I've created an
+            // example showing how to use a foreach loop to search a list for a
+            // value. You can find it here:
+            // https://jcollard.github.io/IntroToCSharpSite/examples/association-list
+
             return null;
         }
 
@@ -156,6 +163,11 @@ namespace PersonalProject1
             /// given the question, the answers are displayed 
             //3. Use the GetValidAnswer(q.Answers) to get the response
             //4. return the response
+
+            // TODO(jcollard 2022-02-10): You're off to a great start. Next, you
+            // need to get the users response to the question. You already have
+            // a method that does this: GetValidAnswer. You just need to call it
+            // here.
 
             return -1;
         }

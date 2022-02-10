@@ -10,7 +10,7 @@ namespace PersonalProject1
 
 
             Question testQuestion = new Question();
-            int testResult = Program.AskQuestion(testQuestion);
+            int testResult = Program.AskQuestion(testQuestion); // TODO(jcollard 2022-02-10): This should come after your instructions. Right above `int expected = 1;`
             testQuestion.question = "Who let the dogs out?";
             testQuestion.answers.Add("Zoe.");
             testQuestion.answers.Add("You did!");
@@ -47,7 +47,7 @@ namespace PersonalProject1
 
 
             Question testQuestion2 = new Question();
-            int testResult2 = Program.AskQuestion(testQuestion2);
+            int testResult2 = Program.AskQuestion(testQuestion2); // TODO(jcollard 2022-02-10): This should come after your instructions. Right above `int expected = 1;`
             testQuestion2.question = "What is the weather outside?"; 
             testQuestion2.answers.Add("Sunny.");
             testQuestion2.answers.Add("Rainy.");
@@ -67,7 +67,7 @@ namespace PersonalProject1
 
 
             Question testQuestion3 = new Question();
-            int testResult3 = Program.AskQuestion(testQuestion3);
+            int testResult3 = Program.AskQuestion(testQuestion3); // TODO(jcollard 2022-02-10): This should come after your instructions. Right above `int expected = 1;`
             testQuestion3.question = "What flavor candy?";
             testQuestion3.answers.Add("vanilla");
             testQuestion3.answers.Add("grape");
@@ -93,16 +93,6 @@ namespace PersonalProject1
                 
             }
 
-
-
-
-
-
-
-
-
-
-            
             return true;
         }
     }
