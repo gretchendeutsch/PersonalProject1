@@ -90,8 +90,10 @@ namespace PersonalProject1
                     Console.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
                 }
                 while(userChoice <= 0 || userChoice >= answers.Count);
+                
+                return userChoice -1;
             }
-            return -1;
+         
             // 1. ensure that there is one possible answer[answer.Length<1]
             // <summary>
             // 2. throw new exception("Must have at least one answer.")

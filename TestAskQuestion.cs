@@ -48,7 +48,7 @@ namespace PersonalProject1
 
             Question testQuestion2 = new Question();
             int testResult2 = Program.AskQuestion(testQuestion2);
-            testQuestion2.question = "What is the weather outside?"; // TODO: Change these to `testQuestion2`
+            testQuestion2.question = "What is the weather outside?"; 
             testQuestion2.answers.Add("Sunny.");
             testQuestion2.answers.Add("Rainy.");
             testQuestion2.answers.Add("snowing.");
@@ -102,7 +102,16 @@ namespace PersonalProject1
 
 
 
-            // TODO(jcollard 2022-02-01): These look great.
+            
+            return true;
+        }
+    }
+}
+
+
+
+
+// TODO(jcollard 2022-02-01): These look great.
             // Now, figure out how to call your methods. In this case you would do the following:
             //
             // 1. Start by setting up a Question object
@@ -126,8 +135,3 @@ namespace PersonalProject1
             // 
             // Think of a few more tests you could do. What should happen if the question has no answers?
             // What should happen if the question has more than 3 answers?
-
-            return true;
-        }
-    }
-}
