@@ -47,7 +47,7 @@ namespace PersonalProject1
             
             Console.WriteLine("You should expect to see 3 options: cry, burp, and die. Enter 6. This should produce an invalid response. Then enter 2.");
 
-            int result3 = Program.GetValidAnswer(answers3);
+            int result3 = Program.GetValidAnswer(answers3); 
 
             if (result3 != 1)
             {
