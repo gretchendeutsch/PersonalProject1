@@ -56,6 +56,18 @@ namespace PersonalProject1
             }
 
            
+           List<string> answers4 = new List<string>();
+
+            try 
+            {
+                Program.GetValidAnswer(answers4);
+                Console.Error.WriteLine($"Expected to crash but did not");
+                return false;
+            }
+            catch 
+            {
+                
+            }
             
 
             return true;

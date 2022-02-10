@@ -15,10 +15,10 @@ namespace PersonalProject1
                 TestAll();
                 return; // Exits the program 
             }
-            
-            
-            
-            
+
+
+
+
             Question simpleQuestion = new Question();
 
             // Next, set the question to be an actual question.
@@ -49,20 +49,20 @@ namespace PersonalProject1
 
         }
 
-         public static void TestAll()
-            {
-                bool testAskQuestion = TestAskQuestion.RunTest();
-                Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
+        public static void TestAll()
+        {
+            bool testAskQuestion = TestAskQuestion.RunTest();
+            Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
 
-                bool testGetResult = TestGetResult.RunTest();
-                Console.WriteLine($"Test GetResult(scores): {testGetResult}");
+            // bool testGetResult = TestGetResult.RunTest();
+            // Console.WriteLine($"Test GetResult(scores): {testGetResult}");
 
-                bool testGetValidAnswer = TestGetValidAnswer.RunTest();
-                Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
+            // bool testGetValidAnswer = TestGetValidAnswer.RunTest();
+            // Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
 
-            }
+        }
 
-      
+
 
 
         /// <summary>
@@ -74,6 +74,10 @@ namespace PersonalProject1
         /// <returns>The valid answer the player chose</returns>
         public static int GetValidAnswer(List<string> answers)
         {
+            if (answers.Count == 0)
+            {
+                throw new Exception("Unable to get a answer for a list of 0.");
+            }
             int userChoice;
 
             do
@@ -85,15 +89,15 @@ namespace PersonalProject1
                 {
                     Console.Error.WriteLine("You did not enter a number");
                 }
-                else if (userChoice <=0 || userChoice >= answers.Count)
+                else if (userChoice <= 0 || userChoice > answers.Count)
                 {
-                    Console.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
+                    Console.Error.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
                 }
-                while(userChoice <= 0 || userChoice >= answers.Count);
-                
-                return userChoice -1;
-            }
-         
+            } while (userChoice <= 0 || userChoice > answers.Count);
+
+            return userChoice - 1;
+
+
             // 1. ensure that there is one possible answer[answer.Length<1]
             // <summary>
             // 2. throw new exception("Must have at least one answer.")
@@ -136,6 +140,16 @@ namespace PersonalProject1
         /// <returns>The valid answer the user chose</returns>
         public static int AskQuestion(Question q)
         {
+
+            if (q.answers == null) throw new ArgumentNullException("List of options may not be null");
+            if (q.answers.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
+            int ix = 1;
+            foreach (string answer in q.answers)
+            {
+             
+                Console.WriteLine($"{ix}. {answer}");
+                ix = ix + 1;
+            }
             //1. display question [e.g. q.Question]
             //2. Loop through each answer and display it
             //      * Foreach question display answers
@@ -149,7 +163,7 @@ namespace PersonalProject1
 
 
 
-    
+
     class Question
     {
         public string question;
