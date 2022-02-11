@@ -5,6 +5,8 @@ namespace PersonalProject1
 {
     class Program
     {
+        private static int response;
+
         static void Main(string[] args)
         {
 
@@ -13,8 +15,9 @@ namespace PersonalProject1
             if (args.Length > 0 && args[0] == "test")
             {
                 TestAll();
-                return; // Exits the program 
+                return;  
             }
+
 
 
 
@@ -44,21 +47,26 @@ namespace PersonalProject1
 
             Question color = new Question();
 
-            AskQuestion(food);
+            // AskQuestion(food);
 
 
         }
 
+        internal static int AskQuestion(Question testQuestion)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void TestAll()
         {
-            bool testAskQuestion = TestAskQuestion.RunTest();
-            Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
+            // bool testAskQuestion = TestAskQuestion.RunTest();
+            // Console.WriteLine($"Test AskQuestion(question q): {testAskQuestion}");
 
             bool testGetResult = TestGetResult.RunTest();
             Console.WriteLine($"Test GetResult(scores): {testGetResult}");
 
-            bool testGetValidAnswer = TestGetValidAnswer.RunTest();
-            Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
+            // bool testGetValidAnswer = TestGetValidAnswer.RunTest();
+            // Console.WriteLine($"Test GetValidAnswer(answers): {testGetValidAnswer}");
 
         }
 
@@ -93,7 +101,8 @@ namespace PersonalProject1
                 {
                     Console.Error.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
                 }
-            } while (userChoice <= 0 || userChoice > answers.Count);
+            } 
+            while (userChoice <= 0 || userChoice > answers.Count);
 
             return userChoice - 1;
 
@@ -120,6 +129,36 @@ namespace PersonalProject1
         /// <returns>the highest result</returns>
         public static string GetResult(List<int> scores, List<string> results)
         {
+
+            if (scores == null || results == null) throw new Exception("Scores and Result Lists may not be null");
+            if (scores.Count == 0) throw new Exception("Can not process an empty list");
+            if (results.Count != scores.Count) throw new Exception("Scores and Results list need to be the same length");
+            int largestScore = scores[0];
+            string result = results[0];
+            int ix = 0;
+
+
+
+            foreach (int score in scores)
+            {
+                if (score > largestScore)
+                {
+
+                    result = results[ix];
+                    largestScore = scores[ix];
+                }
+                ix = ix + 1;
+            }
+            Console.WriteLine($"You are {result}");
+            return result;
+
+        }  
+
+        
+
+
+           
+
             //1. initialize highest score to 0 [int highest = 0]
             //2. initialize highest score to 0: int highest Ix = 0
             //3.Loop through each score in scores, tracking the index in variable currentIx
@@ -128,47 +167,44 @@ namespace PersonalProject1
             //          * update highestIx to store the current ix[highestIx=currentIx]
             //4. After each score is checked highestIx should be the highest score[currIx=currIx+1]
             //5.return results[highestIx]
-            return null;
+        
         }
 
-        /// <summary>
-        /// the question is displayed and then the answers are displayed.The user puts in their answer choice,
-        /// but if the user does not enter a positive integer/answer choice then an error message is displayed and the player 
-        /// is prompted to put in an actual answer. Otherwise, the user's input is returned.
-        /// </summary>
-        /// <param name="q"> The message to potray an invalid answer</param>
-        /// <returns>The valid answer the user chose</returns>
-        public static int AskQuestion(Question q)
+    /// <summary>
+    /// the question is displayed and then the answers are displayed.The user puts in their answer choice,
+    /// but if the user does not enter a positive integer/answer choice then an error message is displayed and the player 
+    /// is prompted to put in an actual answer. Otherwise, the user's input is returned.
+    /// </summary>
+    /// <param name="q"> The message to potray an invalid answer</param>
+    /// <returns>The valid answer the user chose</returns>
+    
+    public static int AskQuestion(Question q)
+    {
+        
+        if (q.answers == null) throw new ArgumentNullException("List of options may not be null");
+        if (q.answers.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
+        Console.WriteLine(q.question);
+        int ix = 1;
+        foreach (string answer in q.answers)
         {
 
-            if (q.answers == null) throw new ArgumentNullException("List of options may not be null");
-            if (q.answers.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
-            int ix = 1;
-            foreach (string answer in q.answers)
-            {
-             
-                Console.WriteLine($"{ix}. {answer}");
-                ix = ix + 1;
-            }
-            //1. display question [e.g. q.Question]
-            //2. Loop through each answer and display it
-            //      * Foreach question display answers
-            /// given the question, the answers are displayed 
-            //3. Use the GetValidAnswer(q.Answers) to get the response
-            //4. return the response
-
-            return -1;
+            Console.WriteLine($"{ix}. {answer}");
+            ix = ix + 1;
         }
+        return GetValidAnswer(q.answers);
+
+
     }
 
 
 
 
-    class Question
-    {
-        public string question;
-        public List<string> answers = new List<string>();
-    }
+
+class Question
+{
+    public string question;
+    public List<string> answers = new List<string>();
+}
 
 
 }
