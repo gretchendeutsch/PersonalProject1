@@ -15,46 +15,47 @@ namespace PersonalProject1
             if (args.Length > 0 && args[0] == "test")
             {
                 TestAll();
-                return;  
+                return;
             }
 
 
+            // TODO(jcollard 2022-02-12): 
+            // You're so close to being done! All that is left is to complete your main method.
+            // When you run `dotnet run` in the terminal, your questions should be asked and then
+            // your result should be displays.
+
+            // 1. Create a List<int> to store your scores:
+            //List<int> scores = new List<int>();
+
+            // 2. Initialize each score to 0
+            // scores.Add(0); // How many times do you need to do this? (once for each score)
+
+            // 3. Create a question
+            // Question dogQuestion = new Question();
+            // dogQuestion.question = "What is your favorite kind of dog?";
+            // dogQuestion.answers.Add("Poodle");
+            // dogQuestion.answers.Add("Chow-Chow");
+            // dogQuestion.answers.Add("Husky");
+
+            // 4. Ask the question
+            // int result = AskQuestion(dogQuestion);
+
+            // 5. Update the score based on the result:
+            // scores[result] = scores[result] + 1;
+
+            // Repeat Steps 3, 4, and 5 for each of your questions.
+
+            // 6. Create a results lists:
+            // List<string> results = new List<string>();
+            // 7. Add elements to the results list
+
+            // 8. Call GetResult:
+            // string finalResult = GetResult(scores, results);
+
+            // 9. Display the results
+            // Console.WriteLine($"You are a {finalResult}");
 
 
-
-            Question simpleQuestion = new Question();
-
-            // Next, set the question to be an actual question.
-            simpleQuestion.question = "How much wood could a woodchuck chuck if a woodchuck could chuck wood?";
-
-            // Next, add answers to the question
-            simpleQuestion.answers.Add("As much wood as a woodchuck could chuck if a woodchuck could chuck wood.");
-            simpleQuestion.answers.Add("Uh... 14?");
-            simpleQuestion.answers.Add("None. Clearly the woodchuck is a manifestation of all your fears.");
-
-            // Finally, you can display the question and answers
-            Console.WriteLine(simpleQuestion.question);
-
-            // For your final solution, you will loop through these rather than manually selecting each one.
-            Console.WriteLine($"1. {simpleQuestion.answers[0]}");
-            Console.WriteLine($"2. {simpleQuestion.answers[1]}");
-            Console.WriteLine($"3. {simpleQuestion.answers[2]}");
-
-            Question food = new Question();
-            food.question = "What is your favorite food?";
-            food.answers.Add("I don't eat.");
-            food.answers.Add("Water");
-
-            Question color = new Question();
-
-            // AskQuestion(food);
-
-
-        }
-
-        internal static int AskQuestion(Question testQuestion)
-        {
-            throw new NotImplementedException();
         }
 
         public static void TestAll()
@@ -101,7 +102,7 @@ namespace PersonalProject1
                 {
                     Console.Error.WriteLine($"That number is not greater than 0 or less than {answers.Count}.");
                 }
-            } 
+            }
             while (userChoice <= 0 || userChoice > answers.Count);
 
             return userChoice - 1;
@@ -152,47 +153,46 @@ namespace PersonalProject1
             Console.WriteLine($"You are {result}");
             return result;
 
-        }  
-
-        
-
-
-           
-
-            //1. initialize highest score to 0 [int highest = 0]
-            //2. initialize highest score to 0: int highest Ix = 0
-            //3.Loop through each score in scores, tracking the index in variable currentIx
-            //    * If score>highest score
-            //          * update highest to store the score from answer[score=highest]
-            //          * update highestIx to store the current ix[highestIx=currentIx]
-            //4. After each score is checked highestIx should be the highest score[currIx=currIx+1]
-            //5.return results[highestIx]
-        
         }
 
-    /// <summary>
-    /// the question is displayed and then the answers are displayed.The user puts in their answer choice,
-    /// but if the user does not enter a positive integer/answer choice then an error message is displayed and the player 
-    /// is prompted to put in an actual answer. Otherwise, the user's input is returned.
-    /// </summary>
-    /// <param name="q"> The message to potray an invalid answer</param>
-    /// <returns>The valid answer the user chose</returns>
-    
-    public static int AskQuestion(Question q)
-    {
-        
-        if (q.answers == null) throw new ArgumentNullException("List of options may not be null");
-        if (q.answers.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
-        Console.WriteLine(q.question);
-        int ix = 1;
-        foreach (string answer in q.answers)
+        /// <summary>
+        /// the question is displayed and then the answers are displayed.The user puts in their answer choice,
+        /// but if the user does not enter a positive integer/answer choice then an error message is displayed and the player 
+        /// is prompted to put in an actual answer. Otherwise, the user's input is returned.
+        /// </summary>
+        /// <param name="q"> The message to potray an invalid answer</param>
+        /// <returns>The valid answer the user chose</returns>
+
+        public static int AskQuestion(Question q)
         {
 
-            Console.WriteLine($"{ix}. {answer}");
-            ix = ix + 1;
-        }
-        return GetValidAnswer(q.answers);
+            if (q.answers == null) throw new ArgumentNullException("List of options may not be null");
+            if (q.answers.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
+            Console.WriteLine(q.question);
+            int ix = 1;
+            foreach (string answer in q.answers)
+            {
 
+                Console.WriteLine($"{ix}. {answer}");
+                ix = ix + 1;
+            }
+            return GetValidAnswer(q.answers);
+
+
+        }
+
+
+
+
+
+        //1. initialize highest score to 0 [int highest = 0]
+        //2. initialize highest score to 0: int highest Ix = 0
+        //3.Loop through each score in scores, tracking the index in variable currentIx
+        //    * If score>highest score
+        //          * update highest to store the score from answer[score=highest]
+        //          * update highestIx to store the current ix[highestIx=currentIx]
+        //4. After each score is checked highestIx should be the highest score[currIx=currIx+1]
+        //5.return results[highestIx]
 
     }
 
@@ -200,11 +200,13 @@ namespace PersonalProject1
 
 
 
-class Question
-{
-    public string question;
-    public List<string> answers = new List<string>();
-}
+
+
+    class Question
+    {
+        public string question;
+        public List<string> answers = new List<string>();
+    }
 
 
 }
