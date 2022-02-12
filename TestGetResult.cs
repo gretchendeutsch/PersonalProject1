@@ -23,7 +23,7 @@ namespace PersonalProject1
             }
 
             List<int> scores2 = new List<int>();
-            // TODO(jcollard 2022-02-05): Try a list with different values than your previous test
+        
             scores2.Add(0);
             scores2.Add(3);
 
@@ -38,7 +38,6 @@ namespace PersonalProject1
             }
 
             List<int> scores3 = new List<int>();
-            // TODO(jcollard 2022-02-05): Try a list with different values than your previous test
             scores3.Add(1);
             scores3.Add(2);
             scores3.Add(3);
@@ -57,11 +56,11 @@ namespace PersonalProject1
 
 
             List<int> scores4 = new List<int>();
-            // TODO(jcollard 2022-02-05): The length of this list should match the length of the results list.
-            scores4.Add(1); // question 1
-            scores4.Add(4); // question 2
-            scores.Add(3); // question 3
-            scores.Add(4); // question 4
+          
+            scores4.Add(1); 
+            scores4.Add(4); 
+            scores.Add(3); 
+            scores.Add(4); 
 
 
             List<string> results4 = new List<string>();
