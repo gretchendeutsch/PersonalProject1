@@ -55,6 +55,93 @@ namespace PersonalProject1
             // 9. Display the results
             // Console.WriteLine($"You are a {finalResult}");
 
+            List<Question> questions = new List<Question>();
+            Question relationshipQuestion = new Question();
+            relationshipQuestion.question = "What is your relationship status?";
+            relationshipQuestion.answers.Add("newly taken");
+            relationshipQuestion.answers.Add("taken");
+            relationshipQuestion.answers.Add("married");
+            relationshipQuestion.answers.Add("extra-single");
+            relationshipQuestion.answers.Add("single and ready to mingle");
+            relationshipQuestion.answers.Add("take + pda");
+            relationshipQuestion.answers.Add("single");
+            questions.Add(relationshipQuestion);
+
+            Question drinkQuestion = new Question();
+            drinkQuestion.question = "What is your favorite drink?";
+            drinkQuestion.answers.Add("green juice");
+            drinkQuestion.answers.Add("lemonade");
+            drinkQuestion.answers.Add("weird sleep drink");
+            drinkQuestion.answers.Add("shirley temple");
+            drinkQuestion.answers.Add("coffee");
+            drinkQuestion.answers.Add("pina colada");
+            drinkQuestion.answers.Add("strawberry, java chip frappe");
+            questions.Add(drinkQuestion);
+
+            Question foodQuestion = new Question();
+            foodQuestion.question = "What is your favorite food?";
+            foodQuestion.answers.Add("sushi");
+            foodQuestion.answers.Add("chicken");
+            foodQuestion.answers.Add("pasta");
+            foodQuestion.answers.Add("acai bowl");
+            foodQuestion.answers.Add("thai");
+            foodQuestion.answers.Add("peanut butter cups");
+            foodQuestion.answers.Add("bagels");
+            questions.Add(foodQuestion);
+
+            Question movieQuestion = new Question();
+            movieQuestion.question = "What is your favorite movie?";
+            movieQuestion.answers.Add("Shrek");
+            movieQuestion.answers.Add("I don't like movies");
+            movieQuestion.answers.Add("Twilight");
+            movieQuestion.answers.Add("Deadpool");
+            movieQuestion.answers.Add("How to lose a guy in 10 days");
+            movieQuestion.answers.Add("The Notebook");
+            movieQuestion.answers.Add("10 things I hate about you");
+            questions.Add(movieQuestion);
+
+            Question artistQuestion = new Question();
+            artistQuestion.question = "Who is your favorite artist";
+            artistQuestion.answers.Add("Kendrick");
+            artistQuestion.answers.Add("Kanye");
+            artistQuestion.answers.Add("Mac Miller");
+            artistQuestion.answers.Add("Rihanna");
+            artistQuestion.answers.Add("Gretchen");
+            artistQuestion.answers.Add("Doja Cat");
+            artistQuestion.answers.Add("Justin Bieber");
+            questions.Add(artistQuestion);
+
+
+
+            List<int> scores = new List<int>();
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+
+            List<string> results = new List<string>();
+            results.Add("Gretchen");
+            results.Add("Kailey");
+            results.Add("Gabi");
+            results.Add("Zoe");
+            results.Add("Ella");
+            results.Add("Avery");
+            results.Add("Annie");
+
+            foreach (Question q in questions)
+            {
+                int response;
+                response = AskQuestion(q);
+                scores[response] = scores[response] + 1;
+            }
+
+            string result = GetResult(scores, results);
+            Console.WriteLine($"Your result was {result}");
+
+
 
         }
 
